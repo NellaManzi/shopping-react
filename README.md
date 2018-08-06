@@ -1,8 +1,46 @@
-React boilerplate with ES2015, Express.js, and Webpack
+# shopping react app
 
-[![Build Status](https://travis-ci.org/antonfisher/react-express-webpack.svg?branch=master)](https://travis-ci.org/antonfisher/react-express-webpack)
-[![bitHound Dependencies](https://www.bithound.io/github/antonfisher/react-express-webpack/badges/dependencies.svg)](https://www.bithound.io/github/antonfisher/react-express-webpack/master/dependencies/npm)
-[![bitHound Overall Score](https://www.bithound.io/github/antonfisher/react-express-webpack/badges/score.svg)](https://www.bithound.io/github/antonfisher/react-express-webpack)
+![wiref.png](wiref.png)
+
+Create a shopping app for walmart products.
+
+There should be 3 main components:
+
+1. A search component
+  - search for a product and display the results
+  - clicking on a product causes the product window to display/be filled
+  
+2. Product display component
+  - displays information about the product
+  - has a button to add to cart
+  
+3. Cart component
+  - displays everything that was added to the cart
+  - calculates subtotal, GST and shipping (flat $7)
+  
+#### further
+Add a sorting function to the search page. (just sort the results you currently have)
+
+#### further
+When the add to cart button is clicked again, add another item to the cart.
+
+#### further
+Let the user take things back out of the cart
+
+#### further
+Make each item in the cart a link. When the user clicks an item it opens in the product display tab.
+
+#### further
+Add CSS to make the cart `position:absolute`. When something is added to the cart, make the cart display. Add a button inside the cart to hide it.
+
+
+### Express Server Proxy
+You are provided with an API proxy route to use. Look at what it does here: https://github.com/wdi-sg/shopping-react/blob/master/src/server/controllers/query.js
+
+You must fill in an API key.
+
+You can register for one here: https://developer.walmartlabs.com/member/register
+(you don't need a real website to register)
 
 ## Technologies
 
@@ -19,24 +57,6 @@ React boilerplate with ES2015, Express.js, and Webpack
 - preconfigured eslint and Prettier code formatter
 - React Hot Loader
 - Linux/MacOS/Windows
-
-## Screenshots
-
-Demo UI view:
-
-![Demo view](https://raw.githubusercontent.com/antonfisher/react-express-webpack/docs/images/rew2-ui-screenshot.png)
-
-Development `.js` bundles:
-
-![Development js bundles](https://raw.githubusercontent.com/antonfisher/react-express-webpack/docs/images/rew-stat-dev.png)
-
-Production `.js` bundles:
-
-![Production js bundles](https://raw.githubusercontent.com/antonfisher/react-express-webpack/docs/images/rew-stat-prod.png)
-
-Production mode server output:
-
-![Production js bundles](https://raw.githubusercontent.com/antonfisher/react-express-webpack/docs/images/rew-log-prod.png)
 
 ## Usage
 
