@@ -31,7 +31,7 @@ Let the user take things back out of the cart
 Make each item in the cart a link. When the user clicks an item it opens in the product display tab.
 
 #### further
-Add CSS to make the cart `position:absolute`. When something is added to the cart, make the cart display. Add a button inside the cart to hide it.
+Change the layout of the app to have only 2 columns. Add CSS to make the cart `position:absolute`. When something is added to the cart, make the cart display. Add a button inside the cart to hide it.
 
 
 ### Express Server Proxy
