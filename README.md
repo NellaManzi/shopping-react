@@ -47,9 +47,50 @@ Add more of the search result attributes into the product page.
 #### further
 Adjust the shipping cost according to the item added to the cart.
 
+### `this` keyword with XML HttpRequest
+With `XMLHttpRequest` we set the response text using `this` keyword.
+```
+function reqListener () {
+  console.log(this.responseText);
+}
+
+var oReq = new XMLHttpRequest();
+oReq.addEventListener("load", reqListener);
+oReq.open("GET", "http://www.example.org/example.txt");
+oReq.send();
+```
+
+If we want to set state in a react component method we need to have access to `this` keyowrd when it is the *react* this.
+```
+componentDidMount(){
+
+  //copy the value of this in order to refer to it in another way.
+  var reactThis = this;
+  
+  function reqListener () {
+   console.log(this.responseText);
+   
+   //transform the response to real js objects
+   const data = JSON.parse( this.responseText );
+   
+   // here, we can't do this.setState
+   
+   //refer to react state instead
+   reactThis.setState({queryData:data});
+  }
+
+  var oReq = new XMLHttpRequest();
+  oReq.addEventListener("load", reqListener);
+  oReq.open("GET", "http://www.example.org/example.txt");
+  oReq.send();
+
+}
+```
 
 ### Express Server Proxy
 You are provided with an API proxy route to use. Look at what it does here: https://github.com/wdi-sg/shopping-react/blob/master/src/server/controllers/query.js
+
+You would make a request to the server with a url that looks like this: `http://localhost:3000/api/query?search=bananas`
 
 You must fill in an API key.
 
