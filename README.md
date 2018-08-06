@@ -44,7 +44,7 @@ You can register for one here: https://developer.walmartlabs.com/member/register
 
 ## Technologies
 
-- React (v16) + Redux (v3) + React Router (v4)
+- React (v16)
 - Express.js (v4) as production and development server
 - Webpack 4 (production and development configurations)
 - SCSS support (+ sanitize.css included)
