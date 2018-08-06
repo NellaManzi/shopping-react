@@ -18,6 +18,11 @@ There should be 3 main components:
   - displays everything that was added to the cart
   - calculates subtotal, GST and shipping (flat $7)
   
+Add bootstrap to your app if you like.
+
+#### further
+Add a carousel component to your app to display all the product images. Perhaps slick carousel npm library: https://github.com/akiran/react-slick
+  
 #### further
 Add a sorting function to the search page. (just sort the results you currently have)
 
@@ -32,6 +37,15 @@ Make each item in the cart a link. When the user clicks an item it opens in the 
 
 #### further
 Change the layout of the app to have only 2 columns. Add CSS to make the cart `position:absolute`. When something is added to the cart, make the cart display. Add a button inside the cart to hide it.
+
+#### further
+Paginate your search results.
+
+#### further
+Add more of the search result attributes into the product page.
+
+#### further
+Adjust the shipping cost according to the item added to the cart.
 
 
 ### Express Server Proxy
