@@ -60,7 +60,9 @@ oReq.open("GET", "http://www.example.org/example.txt");
 oReq.send();
 ```
 
-If we want to set state in a react component method we need to have access to `this` keyowrd when it is the *react* this.
+If we want to set state in a react component method we need to have access to `this` keyowrd when it is the *react* `this`.
+
+Just create a new variable that has the *react* `this` keyword value. 
 ```
 componentDidMount(){
 
