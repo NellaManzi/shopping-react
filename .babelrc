@@ -1,0 +1,15 @@
+{
+  "presets": [
+    [
+      "airbnb",
+      {
+        "modules": false
+      }
+    ],
+    "react"
+  ],
+  "retainLines": true,
+  "plugins": [
+    "react-hot-loader/babel"
+  ]
+}
