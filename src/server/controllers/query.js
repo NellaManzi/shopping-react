@@ -7,7 +7,7 @@ module.exports = {
 
     let query = req.query.search;
 
-    let url = `http://api.walmartlabs.com/v1/search?apiKey=${apiKey}&&query=${query}`
+    let url = `http://api.walmartlabs.com/v1/search?apiKey=${apiKey}&query=${query}`
 
     request(url, function (error, queryResponse, body) {
           console.log('error:', error); // Print the error if one occurred and handle it
