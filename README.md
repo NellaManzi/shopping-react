@@ -78,7 +78,7 @@ Just create a new variable that has the *react* `this` keyword value.
   //copy the value of this in order to refer to it in another way.
   var reactThis = this;
   
-  function reqListener () {
+  var reqListener = () => {
    console.log(this.responseText);
    
    //transform the response to real js objects
