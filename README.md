@@ -20,6 +20,15 @@ There should be 3 main components:
   
 Add bootstrap to your app if you like.
 
+#### How to Start:
+You should begin your app with one single working component- begin with the search component on the left. The express server in the starter code has a pre-made pass-through route for you to query the walmart API. Use AJAX to make a query to this route and then use react to display the results. (see below for notes on react and `this` keyword in AJAX callbacks)
+
+Sign up for an api key [here](https://developer.walmartlabs.com/) and put it in the query controller. 
+
+When you have a working component that displays the search results, you can begin on the second component. Refactor your code to store the list of results in the parent of the search component. Then use the search result the user selected to populate the second component.
+
+You can then move on to the 3rd component to display the items the user has added to their cart from the 2nd component.
+
 #### further
 Add a carousel component to your app to display all the product images. Perhaps slick carousel npm library: https://github.com/akiran/react-slick
   
@@ -64,7 +73,6 @@ If we want to set state in a react component method we need to have access to `t
 
 Just create a new variable that has the *react* `this` keyword value. 
 ```
-componentDidMount(){
 
   //copy the value of this in order to refer to it in another way.
   var reactThis = this;
@@ -86,7 +94,6 @@ componentDidMount(){
   oReq.open("GET", "http://www.example.org/example.txt");
   oReq.send();
 
-}
 ```
 
 ### Express Server Proxy
