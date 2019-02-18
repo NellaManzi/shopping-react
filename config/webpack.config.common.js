@@ -14,17 +14,16 @@ module.exports = {
   },
   module: {
     rules: [
-     {
+      {
         enforce: 'pre',
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'eslint-loader',
         options: {
-          emitError: true,
           emitWarning: true,
           quiet: false,
           failOnWarning: false,
-          failOnError: false,
+          failOnError: false
         }
       },
       {
@@ -78,7 +77,7 @@ module.exports = {
   ],
   resolve: {
     modules: ['node_modules', join('src', 'client')],
-    extensions: ['.js','.jsx']
+    extensions: ['.js', '.jsx']
   },
   optimization: {
     splitChunks: {

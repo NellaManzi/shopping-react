@@ -107,38 +107,11 @@ You must fill in an API key.
 You can register for one here: https://developer.walmartlabs.com/member/register
 (you don't need a real website to register)
 
-## Technologies
-
-- React (v16)
-- Express.js (v4) as production and development server
-- Webpack 4 (production and development configurations)
-- SCSS support (+ sanitize.css included)
-- ES2015+
-
-## Features
-- preconfigured router
-- React Material UI example theme
-- preconfigured modal windows
-- preconfigured eslint and Prettier code formatter
-- React Hot Loader
-- Linux/MacOS/Windows
-
 ## Usage
 
 ### Make sure you have nodemon installed globally
 ```
 npm install -g nodemon
-```
-
-### Installation
-```bash
-git clone git@github.com:antonfisher/react-express-webpack.git
-cd react-express-webpack
-npm install
-
-
-# remove boilerplate git references
-rm ./.git
 ```
 
 ### Scripts
@@ -162,3 +135,5 @@ HTTP_PORT=3001 npm run dev
 
 ## License
 MIT License. Free use and change.
+
+

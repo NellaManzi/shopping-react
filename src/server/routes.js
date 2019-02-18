@@ -1,5 +1,7 @@
-const query = require('./controllers/query');
+module.exports = (app, db) => {
+  const pokemon = require('./controllers/pokemon')(db);
 
-module.exports = (app) => {
-  app.get('/api/query', query.get);
+  app.get('/pokemon/:id', pokemon.get);
+
+  app.get('/api/pokemon/:id', pokemon.apiget);
 };
