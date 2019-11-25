@@ -3,7 +3,7 @@
 
 ![wiref.png](wiref.png)
 
-Create a shopping app for walmart products.
+Create a shopping app for products.
 
 There should be 3 main components:
 
@@ -21,10 +21,15 @@ There should be 3 main components:
   
 Add bootstrap to your app if you like.
 
-#### How to Start:
-You should begin your app with one single working component- begin with the search component on the left. The express server in the starter code has a pre-made pass-through route for you to query the walmart API. Use AJAX to make a query to this route and then use react to display the results. (see below for notes on react and `this` keyword in AJAX callbacks)
+#### How to Start: Rails
+A product has a name, a price and a description and an image url. Look in the `seeds.rb` file for a reference.
 
-Sign up for an api key [here](https://developer.walmartlabs.com/) and put it in the query controller. 
+Create a migration, model, route and controller for products. For now you only need one route, which shows a list of all products. `Product.all`
+
+There is a (non-working) seed file that will fill your products table after you have a model.
+
+#### How to Start: React
+You should begin your app with one single working component- begin with the search component on the left. Use AJAX to make a query to this route and then use react to display the results.
 
 When you have a working component that displays the search results, you can begin on the second component. Refactor your code to store the list of results in the parent of the search component. Then use the search result the user selected to populate the second component.
 
@@ -56,84 +61,4 @@ Add more of the search result attributes into the product page.
 
 #### further
 Adjust the shipping cost according to the item added to the cart.
-
-### `this` keyword with XML HttpRequest
-With `XMLHttpRequest` we set the response text using `this` keyword.
-```
-function reqListener () {
-  console.log(this.responseText);
-}
-
-var oReq = new XMLHttpRequest();
-oReq.addEventListener("load", reqListener);
-oReq.open("GET", "http://www.example.org/example.txt");
-oReq.send();
-```
-
-If we want to set state in a react component method we need to have access to `this` keyowrd when it is the *react* `this`.
-
-Just create a new variable that has the *react* `this` keyword value. 
-```
-
-  //copy the value of this in order to refer to it in another way.
-  var reactThis = this;
-  
-  var reqListener = () => {
-   console.log(this.responseText);
-   
-   //transform the response to real js objects
-   const data = JSON.parse( this.responseText );
-   
-   // here, we can't do this.setState
-   
-   //refer to react state instead
-   reactThis.setState({queryData:data});
-  }
-
-  var oReq = new XMLHttpRequest();
-  oReq.addEventListener("load", reqListener);
-  oReq.open("GET", "http://www.example.org/example.txt");
-  oReq.send();
-
-```
-
-### Express Server Proxy
-You are provided with an API proxy route to use. Look at what it does here: https://github.com/wdi-sg/shopping-react/blob/master/src/server/controllers/query.js
-
-You would make a request to the server with a url that looks like this: `http://localhost:3000/api/query?search=bananas`
-
-You must fill in an API key.
-
-You can register for one here: https://developer.walmartlabs.com/member/register
-(you don't need a real website to register)
-
-## Usage
-
-### Make sure you have nodemon installed globally
-```
-npm install -g nodemon
-```
-
-### Scripts
-```bash
-# run development mode
-npm run dev
-
-# run production mode
-npm run build
-npm start
-
-# run prettier
-npm run prettier
-
-# run lint
-npm run lint
-
-# run on a different port
-HTTP_PORT=3001 npm run dev
-```
-
-## License
-MIT License. Free use and change.
-
 
